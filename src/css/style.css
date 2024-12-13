@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+
+body {
+    background-color: #EEEEEE;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: #1F2949;
+    color: #FFF;
+    max-width: 330px;
+    text-align: center;
+    background-image: url("../img/ambiente.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 1) 0 10px 50px;
+    border-radius: 30px;
+}
+
+.container .busca {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.container .busca input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-weight: bolder;
+    opacity: 0.8;
+}
+
+.container .busca .btn-busca {
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.container .busca .btn-busca .lupa {
+    width: 30px;
+    border: none;
+}
+
+.container .informacao-principal {
+    margin: 30px;
+}
+
+.container .informacao-principal h1 {
+    font-size: 20px;
+}
+
+.container .informacao-principal .temperatura {
+    font-size: 68px;
+    margin: 20px 0;
+}
+
+.container .informacao-principal .condicao {
+    font-size: 20px;
+}
+
+.container .informacao-secundaria {
+    background-color: #FFF;
+    color: black;
+    padding: 20px 30px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.container .informacao-secundaria .humidade, .container .informacao-secundaria .velocidade-do-vento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
