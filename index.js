@@ -3,15 +3,17 @@ const botaoDeBusca = document.querySelector(".btn-busca")
 
 botaoDeBusca.addEventListener("click", async () => {
     const cidade = document.getElementById("input-busca").value
-
+    
     if(!cidade) return
 
     const dados = await buscarDadosDaCidade(cidade)
-    if (dados) preencherDadosNaTela(dados, cidade)
+    if (dados) preencherDadosNaTela(dados, cidade);
+    
+    
 })
 
 async function buscarDadosDaCidade(cidade) {
-    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${chaveDaApi}&q=${cidade}&aqi=no`
+    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${chaveDaApi}&q=${cidade}&aqi=no&lang=pt`
     
     const response = await fetch(apiUrl)
 
@@ -28,6 +30,8 @@ function preencherDadosNaTela(dados, cidade){
     const humidade = dados.current.humidity
     const velocidadeDoVento = dados.current.wind_kph
     const iconeCondicao = dados.current.condition.icon
+
+    
 
     document.getElementById("cidade").textContent = cidade
     document.getElementById("temperatura").textContent = `${temperatura} ºC`

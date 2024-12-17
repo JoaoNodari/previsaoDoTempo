@@ -41,6 +41,7 @@ body {
     border: none;
     outline: none;
     border-radius: 10px;
+    text-transform: capitalize;
 }
 
 .container-principal .container-informacoes .busca .btn-busca{
@@ -69,6 +70,11 @@ body {
     gap: 20px;
     margin-bottom: 20px;
 }
+
+.container-principal .container-informacoes .informacoes .cidade {
+    text-transform: capitalize;
+}
+
 
 .container-principal .container-informacoes .informacoes-secundarias .humidade, .velocidade-vento {
     margin-bottom: 20px;
