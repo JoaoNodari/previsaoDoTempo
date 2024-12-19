@@ -1,0 +1,26 @@
+@media (max-width: 942px) {
+    .container-principal {
+        flex-direction: column;
+        margin: 50px 0;
+    }
+    
+    .container-principal .container-imagem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-principal .container-imagem .titulo {
+        text-align: center;
+        font-family: "Teko", serif;
+        font-size: 35px;
+        color: #39a6f7;
+    }
+
+    .container-principal .container-imagem .imagem {
+        width: 250px;
+        height: 250px;
+    }
+
+
+}

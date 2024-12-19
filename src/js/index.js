@@ -1,5 +1,8 @@
 const chaveDaApi = "a4c228e7a5af4d62ad6194434241312"
 const botaoDeBusca = document.querySelector('.btn-busca')
+const imagem = document.querySelector(".container-informacoes")
+console.log(imagem)
+
 
 botaoDeBusca.addEventListener("click", async () => {
     const cidade = document.getElementById("input-cidade").value
@@ -43,25 +46,34 @@ function preencherDadosNaTela(dados, cidade) {
 
 function clima(tempoCondicao) {
 
-    
+    const section = document.querySelector(".container-informacoes")
+
+    section.classList.forEach(className => {
+        if (className.startsWith('imagem')) { // Verifica se começa com "imagem"
+          section.classList.remove(className); // Remove a classe correspondente
+        }
+      });
+
+      console.log(section)
 
     switch (tempoCondicao) {
         case "Sol":
-            console.log("Está sol")
+            imagem.classList.add("imagem1")
             break
         case "Parcialmente nublado":
-            console.log("Está Parcialmente Nublado")
+        case "Encoberto":
+            imagem.classList.add("imagem3")
             break
         case "Chuva moderada ou forte com trovoada":
         case "Possibilidade de chuva irregular":
         case "Aguaceiros fracos":
-            console.log("Está com tempo de Chuva")
-            break
-        case "Encoberto":
-            console.log("Está encorberto")
+            imagem.classList.add("imagem2")
             break
         case "Céu limpo":
-            console.log("Céu limpo")
+            imagem.classList.add("imagem4")
+            break
+        default:
+            imagem.classList.add("imagem")
             break
     }
 }
